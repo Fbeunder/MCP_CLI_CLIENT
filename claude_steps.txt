@@ -1,0 +1,45 @@
+# Python MCP CLI Client - Ontwikkelstappen
+
+## Must-haves
+
+1. **Fix import path in mcp_cli.py**
+   - Momenteel importeert mcp_cli.py direct 'mcp_client', wat problemen geeft met de python module structuur
+   - Aanpassen naar een relatief import pad: 'from src.mcp_client import MCPClient, log'
+
+2. **Implementeer entrypoint script**
+   - Maak een main.py bestand in de root van het project
+   - Zorg voor eenvoudige toegang tot de CLI zonder directe module imports
+
+3. **Voeg gebruikersvriendelijke foutafhandeling toe**
+   - Verbeter afhandeling van fouten en uitzonderingen
+   - Voeg betere gebruikersfeedback toe bij ontbrekende .env bestand
+
+4. **Voeg ondersteuning voor gebruik als Python module**
+   - Maak het mogelijk om de client als een Python API te gebruiken in andere projecten
+   - Documenteer dit gebruik in de README
+
+5. **Implementeer basistests**
+   - Voeg unittests toe voor kernfunctionaliteiten
+   - Implementeer mocking voor externe afhankelijkheden
+
+## Nice-to-haves
+
+1. **Implementeer een lokale MCP-servervoorbeeld**
+   - Maak een eenvoudige implementatie van een lokale MCP-server voor demonstratiedoeleinden
+   - Voeg documentatie toe over hoe deze te gebruiken als voorbeeld
+
+2. **Voeg colorized output toe**
+   - Verbeter de CLI met gekleurde output voor betere leesbaarheid
+   - Gebruik verschillende kleuren voor verschillende logniveaus en JSON-RPC berichten
+
+3. **Implementeer command history en auto-completion**
+   - Voeg historie-functionaliteit toe aan de interactieve modus
+   - Implementeer tabcompletion voor beschikbare methoden
+
+4. **Voeg configuratie commando toe**
+   - Implementeer een configuratie-subcommando voor het bewerken van .env instellingen
+   - Maak het mogelijk om configuraties op te slaan en tussen te schakelen
+
+5. **Implementeer plugin-architectuur**
+   - Maak het mogelijk om plugins toe te voegen voor extra functionaliteit
+   - Documenteer hoe plugins ontwikkeld en toegevoegd kunnen worden
