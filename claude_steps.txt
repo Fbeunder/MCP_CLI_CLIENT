@@ -22,31 +22,37 @@
    - Documenteer dit gebruik in de README
    - Opgelost in PR #8
 
-5. **Implementeer basistests** 👈 (huidige taak)
+5. **Implementeer basistests** ✅
    - Voeg unittests toe voor kernfunctionaliteiten
    - Implementeer mocking voor externe afhankelijkheden
-   - Werk in uitvoering in PR #10
+   - Opgelost in PR #10
 
 ## Nice-to-haves
 
-1. **Implementeer een lokale MCP-servervoorbeeld**
+1. **Afronden en verbeteren van het testframework** 👈 (huidige taak)
+   - Controleer test coverage en verbeter waar nodig
+   - Maak een requirements-dev.txt bestand voor ontwikkelingsafhankelijkheden
+   - Voeg documentatie toe over het uitvoeren van tests in de README
+   - Issue #11
+
+2. **Implementeer een lokale MCP-servervoorbeeld**
    - Maak een eenvoudige implementatie van een lokale MCP-server voor demonstratiedoeleinden
    - Voeg documentatie toe over hoe deze te gebruiken als voorbeeld
 
-2. **Voeg colorized output toe**
+3. **Voeg colorized output toe**
    - Verbeter de CLI met gekleurde output voor betere leesbaarheid
    - Gebruik verschillende kleuren voor verschillende logniveaus en JSON-RPC berichten
 
-3. **Implementeer command history en auto-completion**
+4. **Implementeer command history en auto-completion**
    - Voeg historie-functionaliteit toe aan de interactieve modus
    - Implementeer tabcompletion voor beschikbare methoden
 
-4. **Voeg configuratie commando toe**
+5. **Voeg configuratie commando toe**
    - Implementeer een configuratie-subcommando voor het bewerken van .env instellingen
    - Maak het mogelijk om configuraties op te slaan en tussen te schakelen
 
-5. **Implementeer plugin-architectuur**
+6. **Implementeer plugin-architectuur**
    - Maak het mogelijk om plugins toe te voegen voor extra functionaliteit
    - Documenteer hoe plugins ontwikkeld en toegevoegd kunnen worden
 
-Alle must-have vervolgstappen zijn nodig voor de basiswerking van de applicatie.
+De huidige vervolgstappen zijn alleen bedoeld voor verbetering en optimalisatie van de applicatie, de basisfunctionaliteit is volledig geïmplementeerd en de applicatie is klaar voor gebruik.
