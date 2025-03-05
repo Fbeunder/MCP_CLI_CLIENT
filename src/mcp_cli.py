@@ -9,7 +9,7 @@ verzoeken naar MCP servers, zowel lokaal (via STDIO) als remote (via SSE).
 import argparse
 import json
 import sys
-from mcp_client import MCPClient, log
+from src.mcp_client import MCPClient, log
 
 def main():
     """Hoofdfunctie voor de MCP CLI."""
