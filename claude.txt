@@ -1,0 +1,35 @@
+# Python MCP CLI Client
+
+## Projectoverzicht
+De Python MCP CLI Client is een command-line interface voor het verbinden en communiceren met MCP-servers (Machine Communication Protocol). De client ondersteunt zowel lokale verbindingen via STDIO als remote verbindingen via SSE (Server-Sent Events). Gebruikers kunnen JSON-RPC requests sturen naar verbonden servers en ontvangen de responses.
+
+## Architectuur
+De applicatie heeft een modulaire opzet met de volgende hoofdcomponenten:
+1. MCP Client Core - De basisklasse voor verbinding en communicatie met MCP servers
+2. Command Line Interface - Een command-line tool voor interactie met de client
+
+## Modules
+
+### Module: MCP Client Core
+- **Status**: Geïmplementeerd
+- **Bestandsnaam**: src/mcp_client.py
+- **Functionaliteit**: 
+  - MCPClient klasse voor verbinding met MCP servers
+  - Ondersteunt STDIO verbindingen met lokale processen
+  - Ondersteunt SSE verbindingen met remote servers
+  - JSON-RPC verzoeken verzenden en responses ontvangen
+  - Thread-safe message queue voor asynchrone verwerking
+- **Afhankelijkheden**: 
+  - requests (HTTP client)
+  - python-dotenv (configuratiebeheer)
+
+### Module: Command Line Interface
+- **Status**: Geïmplementeerd
+- **Bestandsnaam**: src/mcp_cli.py
+- **Functionaliteit**:
+  - Argumentparsing voor command-line opties
+  - Interactieve modus voor opeenvolgende commands
+  - Direct command modus voor één verzoek
+  - Ondersteuning voor zowel lokale als remote verbindingen
+- **Afhankelijkheden**:
+  - MCP Client Core (src/mcp_client.py)
