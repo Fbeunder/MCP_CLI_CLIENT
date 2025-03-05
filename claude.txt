@@ -50,7 +50,7 @@ De applicatie heeft een modulaire opzet met de volgende hoofdcomponenten:
   - setuptools (voor installatie)
 
 ### Module: Test Framework
-- **Status**: In ontwikkeling (PR #10)
+- **Status**: Geïmplementeerd
 - **Bestandsnamen**: tests/*.py, setup.cfg
 - **Functionaliteit**:
   - Unittests voor MCPClient en CLI
