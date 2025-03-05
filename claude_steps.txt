@@ -15,8 +15,9 @@
 3. **Voeg gebruikersvriendelijke foutafhandeling toe** 👈 (huidige taak)
    - Verbeter afhandeling van fouten en uitzonderingen
    - Voeg betere gebruikersfeedback toe bij ontbrekende .env bestand
+   - Werk in uitvoering in PR #6
 
-4. **Voeg ondersteuning voor gebruik als Python module**
+4. **Voeg ondersteuning voor gebruik als Python module** (volgende taak)
    - Maak het mogelijk om de client als een Python API te gebruiken in andere projecten
    - Documenteer dit gebruik in de README
 
