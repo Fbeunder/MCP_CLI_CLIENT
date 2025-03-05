@@ -9,6 +9,7 @@ De MCP CLI Client stelt gebruikers in staat om:
 - Te verbinden met remote MCP-servers via SSE (Server-Sent Events)
 - JSON-RPC verzoeken te sturen naar verbonden servers
 - Te werken in zowel command-line modus als interactieve modus
+- Als een Python module te integreren in andere projecten
 
 ## Installatie
 
@@ -35,19 +36,24 @@ De MCP CLI Client stelt gebruikers in staat om:
    # Bewerk .env met je eigen configuratie
    ```
 
-## Gebruik
+5. Om als Python pakket te installeren:
+   ```bash
+   pip install -e .
+   ```
+
+## Gebruik als Command Line Tool
 
 ### Basis commando's
 
 ```bash
 # Verbinden met een lokale MCP-server en een verzoek uitvoeren
-python -m src.mcp_cli --local --method methodName --params '{"param1": "value1"}'
+python main.py --local --method methodName --params '{"param1": "value1"}'
 
 # Verbinden met een remote MCP-server en een verzoek uitvoeren
-python -m src.mcp_cli --remote --method methodName --params '{"param1": "value1"}'
+python main.py --remote --method methodName --params '{"param1": "value1"}'
 
 # Starten in interactieve modus met een lokale server
-python -m src.mcp_cli --local
+python main.py --local
 ```
 
 ### Interactieve modus
@@ -59,6 +65,49 @@ methodName {"param1": "value1", "param2": "value2"}
 
 Typ `exit`, `quit` of `q` om de interactieve modus te verlaten.
 
+## Gebruik als Python Module
+
+De MCP CLI Client kan ook worden gebruikt als een Python module in je eigen projecten:
+
+```python
+from mcp_cli_client import MCPClient
+
+# Maak een nieuwe client instantie
+client = MCPClient()
+
+# Verbind met een lokale MCP server
+client.connect_stdio("path/to/local/mcp/server")
+# OF verbind met een remote server
+# client.connect_sse("https://mcp-server.example.com/events")
+
+# Stuur verzoeken
+response = client.send_request("getVersion")
+print(response)
+
+# Stuur verzoeken met parameters
+response = client.send_request("echo", {"message": "Hello, MCP!"})
+print(response)
+
+# Sluit de verbinding
+client.close()
+```
+
+### Installatie als module
+
+Om de MCP CLI Client als module te installeren in andere projecten:
+
+```bash
+# Vanuit de repo directory
+pip install -e .
+
+# OF direct vanaf GitHub
+pip install git+https://github.com/Fbeunder/MCP_CLI_CLIENT.git
+```
+
+### Uitgebreid voorbeeld
+
+Bekijk `examples/module_example.py` voor een uitgebreid voorbeeld van het gebruik als module.
+
 ## Configuratie
 
 Configuratie wordt geladen uit het `.env` bestand, met de volgende opties:
@@ -67,6 +116,23 @@ Configuratie wordt geladen uit het `.env` bestand, met de volgende opties:
 - `MCP_LOCAL_COMMAND`: Opdracht om een lokale server te starten via STDIO
 - `API_KEY`: Optionele API-sleutel voor authenticatie
 - `LOG_LEVEL`: Logniveau (DEBUG, INFO, ERROR)
+
+## API Documentatie
+
+### MCPClient
+
+De `MCPClient` klasse biedt de volgende methoden:
+
+- `connect_stdio(command=None)`: Verbind met een lokale MCP server via STDIO
+- `connect_sse(url=None)`: Verbind met een remote MCP server via SSE
+- `send_request(method, params=None)`: Stuur een JSON-RPC verzoek
+- `close()`: Sluit de verbinding
+
+### Exceptions
+
+- `ConfigurationError`: Fout bij laden of verwerken van configuratie
+- `ConnectionError`: Fout bij het maken van een verbinding
+- `CommunicationError`: Fout bij communicatie met de MCP server
 
 ## Licentie
 
