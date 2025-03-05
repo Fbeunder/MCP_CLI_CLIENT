@@ -2,11 +2,12 @@
 
 ## Must-haves
 
-1. **Fix import path in mcp_cli.py**
+1. **Fix import path in mcp_cli.py** ✅
    - Momenteel importeert mcp_cli.py direct 'mcp_client', wat problemen geeft met de python module structuur
    - Aanpassen naar een relatief import pad: 'from src.mcp_client import MCPClient, log'
+   - Opgelost in PR #2
 
-2. **Implementeer entrypoint script**
+2. **Implementeer entrypoint script** 👈 (huidige taak)
    - Maak een main.py bestand in de root van het project
    - Zorg voor eenvoudige toegang tot de CLI zonder directe module imports
 
@@ -43,3 +44,5 @@
 5. **Implementeer plugin-architectuur**
    - Maak het mogelijk om plugins toe te voegen voor extra functionaliteit
    - Documenteer hoe plugins ontwikkeld en toegevoegd kunnen worden
+
+Alle must-have vervolgstappen zijn nodig voor de basiswerking van de applicatie.
