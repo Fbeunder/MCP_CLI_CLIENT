@@ -12,16 +12,17 @@
    - Zorg voor eenvoudige toegang tot de CLI zonder directe module imports
    - Opgelost in PR #4
 
-3. **Voeg gebruikersvriendelijke foutafhandeling toe** 👈 (huidige taak)
+3. **Voeg gebruikersvriendelijke foutafhandeling toe** ✅
    - Verbeter afhandeling van fouten en uitzonderingen
    - Voeg betere gebruikersfeedback toe bij ontbrekende .env bestand
-   - Werk in uitvoering in PR #6
+   - Opgelost in PR #6
 
-4. **Voeg ondersteuning voor gebruik als Python module** (volgende taak)
+4. **Voeg ondersteuning voor gebruik als Python module** 👈 (huidige taak)
    - Maak het mogelijk om de client als een Python API te gebruiken in andere projecten
    - Documenteer dit gebruik in de README
+   - Werk in uitvoering in PR #8
 
-5. **Implementeer basistests**
+5. **Implementeer basistests** (volgende taak)
    - Voeg unittests toe voor kernfunctionaliteiten
    - Implementeer mocking voor externe afhankelijkheden
 
