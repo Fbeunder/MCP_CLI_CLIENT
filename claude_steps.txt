@@ -17,14 +17,15 @@
    - Voeg betere gebruikersfeedback toe bij ontbrekende .env bestand
    - Opgelost in PR #6
 
-4. **Voeg ondersteuning voor gebruik als Python module** 👈 (huidige taak)
+4. **Voeg ondersteuning voor gebruik als Python module** ✅
    - Maak het mogelijk om de client als een Python API te gebruiken in andere projecten
    - Documenteer dit gebruik in de README
-   - Werk in uitvoering in PR #8
+   - Opgelost in PR #8
 
-5. **Implementeer basistests** (volgende taak)
+5. **Implementeer basistests** 👈 (huidige taak)
    - Voeg unittests toe voor kernfunctionaliteiten
    - Implementeer mocking voor externe afhankelijkheden
+   - Werk in uitvoering in PR #10
 
 ## Nice-to-haves
 
