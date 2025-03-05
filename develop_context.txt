@@ -29,7 +29,7 @@ o	Acceptatiecriteria
 o	Als een code script tussen de 200 en 250 regels lijkt te krijgen, probeer het dan verder op te splitsen in losse modules.
 3. Labels: Toevoegen van labels "must-have", "nice-to-have" "bug"
 4. Na het oplossen van een issue, vul het issue aan met wat er is gedaan.
-5. Noteer de <commit-hash> die zijn uitgevoerd.
+5. Koppel de PR aan het issue, als er een PR is.
 
 Volg deze werkwijze voor werken met issues in GitHub om wijzigingen te beheren:
 1. Nieuwe branch maken - maak één branche per issue
