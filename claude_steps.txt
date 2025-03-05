@@ -7,11 +7,12 @@
    - Aanpassen naar een relatief import pad: 'from src.mcp_client import MCPClient, log'
    - Opgelost in PR #2
 
-2. **Implementeer entrypoint script** 👈 (huidige taak)
+2. **Implementeer entrypoint script** ✅
    - Maak een main.py bestand in de root van het project
    - Zorg voor eenvoudige toegang tot de CLI zonder directe module imports
+   - Opgelost in PR #4
 
-3. **Voeg gebruikersvriendelijke foutafhandeling toe**
+3. **Voeg gebruikersvriendelijke foutafhandeling toe** 👈 (huidige taak)
    - Verbeter afhandeling van fouten en uitzonderingen
    - Voeg betere gebruikersfeedback toe bij ontbrekende .env bestand
 
