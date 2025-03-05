@@ -8,6 +8,7 @@ De applicatie heeft een modulaire opzet met de volgende hoofdcomponenten:
 1. MCP Client Core - De basisklasse voor verbinding en communicatie met MCP servers
 2. Command Line Interface - Een command-line tool voor interactie met de client
 3. Python Module Interface - API voor gebruik in andere Python projecten
+4. Test Framework - Unittests en integratietests voor kwaliteitsborging
 
 ## Modules
 
@@ -47,3 +48,15 @@ De applicatie heeft een modulaire opzet met de volgende hoofdcomponenten:
 - **Afhankelijkheden**:
   - MCP Client Core (src/mcp_client.py)
   - setuptools (voor installatie)
+
+### Module: Test Framework
+- **Status**: In ontwikkeling (PR #10)
+- **Bestandsnamen**: tests/*.py, setup.cfg
+- **Functionaliteit**:
+  - Unittests voor MCPClient en CLI
+  - Integratietests voor de gehele applicatie
+  - Mocking van externe afhankelijkheden
+  - Coverage rapportage
+- **Afhankelijkheden**:
+  - pytest (testframework)
+  - pytest-cov (coverage rapportage)
