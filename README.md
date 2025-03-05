@@ -117,6 +117,33 @@ Configuratie wordt geladen uit het `.env` bestand, met de volgende opties:
 - `API_KEY`: Optionele API-sleutel voor authenticatie
 - `LOG_LEVEL`: Logniveau (DEBUG, INFO, ERROR)
 
+## Testen
+
+Het project bevat een uitgebreide testsuite met unit tests en integratietests.
+
+### Tests uitvoeren
+
+1. Installeer de test dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Voer alle tests uit:
+   ```bash
+   pytest
+   ```
+
+3. Voer tests uit met coverage rapportage:
+   ```bash
+   pytest --cov=src
+   ```
+
+### Teststructuur
+
+- `tests/test_mcp_client.py`: Unit tests voor de MCPClient class
+- `tests/test_mcp_cli.py`: Unit tests voor de command-line interface
+- `tests/test_integration.py`: Integratietests die de verschillende componenten samen testen
+
 ## API Documentatie
 
 ### MCPClient
