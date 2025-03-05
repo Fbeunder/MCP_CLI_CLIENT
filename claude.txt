@@ -1,12 +1,13 @@
 # Python MCP CLI Client
 
 ## Projectoverzicht
-De Python MCP CLI Client is een command-line interface voor het verbinden en communiceren met MCP-servers (Machine Communication Protocol). De client ondersteunt zowel lokale verbindingen via STDIO als remote verbindingen via SSE (Server-Sent Events). Gebruikers kunnen JSON-RPC requests sturen naar verbonden servers en ontvangen de responses.
+De Python MCP CLI Client is een command-line interface voor het verbinden en communiceren met MCP-servers (Machine Communication Protocol). De client ondersteunt zowel lokale verbindingen via STDIO als remote verbindingen via SSE (Server-Sent Events). Gebruikers kunnen JSON-RPC requests sturen naar verbonden servers en ontvangen de responses. De client kan ook als Python module worden gebruikt in andere projecten.
 
 ## Architectuur
 De applicatie heeft een modulaire opzet met de volgende hoofdcomponenten:
 1. MCP Client Core - De basisklasse voor verbinding en communicatie met MCP servers
 2. Command Line Interface - Een command-line tool voor interactie met de client
+3. Python Module Interface - API voor gebruik in andere Python projecten
 
 ## Modules
 
@@ -19,6 +20,7 @@ De applicatie heeft een modulaire opzet met de volgende hoofdcomponenten:
   - Ondersteunt SSE verbindingen met remote servers
   - JSON-RPC verzoeken verzenden en responses ontvangen
   - Thread-safe message queue voor asynchrone verwerking
+  - Uitgebreide foutafhandeling en gebruikersfeedback
 - **Afhankelijkheden**: 
   - requests (HTTP client)
   - python-dotenv (configuratiebeheer)
@@ -31,5 +33,17 @@ De applicatie heeft een modulaire opzet met de volgende hoofdcomponenten:
   - Interactieve modus voor opeenvolgende commands
   - Direct command modus voor één verzoek
   - Ondersteuning voor zowel lokale als remote verbindingen
+  - Gebruikersvriendelijke foutafhandeling
 - **Afhankelijkheden**:
   - MCP Client Core (src/mcp_client.py)
+
+### Module: Python Module Interface
+- **Status**: Geïmplementeerd
+- **Bestandsnamen**: __init__.py, src/__init__.py, setup.py
+- **Functionaliteit**:
+  - Gebruik als importeerbare Python module in andere projecten
+  - Eenvoudige API voor verbinding en communicatie met MCP servers
+  - Pip-installeerbaar pakket
+- **Afhankelijkheden**:
+  - MCP Client Core (src/mcp_client.py)
+  - setuptools (voor installatie)
